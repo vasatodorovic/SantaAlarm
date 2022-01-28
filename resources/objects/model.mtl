@@ -1,0 +1,27 @@
+
+
+
+
+
+
+newmtl UniqueID_15
+	 Ka 0 0 0
+	 Kd 0.64 0.64 0.64
+	 Ks 0.5 0.5 0.5
+	 illum 2
+	 Ns 96.0784
+map_Kd 0_tree-acess-04.jpeg
+newmtl Material__57
+	 Ka 0 0 0
+	 Kd 0.64 0.64 0.64
+	 Ks 0.5 0.5 0.5
+	 illum 2
+	 Ns 96.0784
+map_Kd 0_tree-acess-04.jpeg
+newmtl Material__55
+	 Ka 0 0 0
+	 Kd 0.64 0.64 0.64
+	 Ks 0.5 0.5 0.5
+	 illum 2
+	 Ns 96.0784
+map_Kd 1_tree-leaf+hang-01.jpeg
