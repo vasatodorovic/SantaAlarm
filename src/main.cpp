@@ -45,7 +45,6 @@ float deltaTime = 0.0f;
 float lastFrame = 0.0f;
 //positions
 glm::vec3 treePosition(0.0f, 0.0f, 0.0f);
-glm::vec3 pyramidPosition(5.15f, 0.5f, 4.0f);
 glm::vec3 santalocation(0.0f,0.0f,7.0f);
 
 
@@ -234,8 +233,8 @@ int main()
                     glm::vec3(-20.0f, 2.5f, -22.5f),
                     glm::vec3( -12.5f, 2.5f, -22.5f),
                     glm::vec3( -3.0f, 2.5f, -22.5f),
-                    glm::vec3(2.5f, 2.5f, -22.0f),
-                    glm::vec3 (15.5f, 2.5f, -22.0f),
+                    glm::vec3(2.5f, 2.5f, -22.5f),
+                    glm::vec3 (15.5f, 2.5f, -22.5f),
                     glm::vec3(-25.5f, 2.5f, 25.0f),//napred
                     glm::vec3( -15.5f, 2.5f, 25.0f),
                     glm::vec3( -7.0f, 2.5f, 25.0f),
@@ -251,21 +250,21 @@ int main()
                     glm::vec3( -25.3, 2.5f, 4.0f),
                     glm::vec3(-25.3, 2.5f, 12.0f),
                     glm::vec3 (-25.3, 2.5f, 20.0f),
-                    glm::vec3(-25.3, 2.5f, -5.5f),
-                    glm::vec3( -25.3, 2.5f, 3.5f),
-                    glm::vec3( -25.3, 2.5f, 11.5f),
-                    glm::vec3(-25.3, 2.5f, 17.5f),
-                    glm::vec3 (-25.3, 2.5f, 25.5f),
+                    glm::vec3(-25.2, 2.5f, -5.5f),
+                    glm::vec3( -25.2, 2.5f, 3.5f),
+                    glm::vec3( -25.2, 2.5f, 11.5f),
+                    glm::vec3(-25.2, 2.5f, 17.5f),
+                    glm::vec3 (-25.2, 2.5f, 25.5f),
                     glm::vec3(25.3, 2.5f, -12.0f),//desno
                     glm::vec3( 25.3, 2.5f, -4.0f),
                     glm::vec3( 25.3, 2.5f, 4.0f),
                     glm::vec3(25.3, 2.5f, 12.0f),
                     glm::vec3 (25.3, 2.5f, 20.0f),
-                    glm::vec3(25.3, 2.5f, -5.5f),
-                    glm::vec3( 25.3, 2.5f, 3.5f),
-                    glm::vec3( 25.3, 2.5f, 11.5f),
-                    glm::vec3(25.3, 2.5f, 17.5f),
-                    glm::vec3 (25.3, 2.5f, 25.5f)
+                    glm::vec3(25.2, 2.5f, -5.5f),
+                    glm::vec3( 25.2, 2.5f, 3.5f),
+                    glm::vec3( 25.2, 2.5f, 11.5f),
+                    glm::vec3(25.2, 2.5f, 17.5f),
+                    glm::vec3 (25.2, 2.5f, 25.5f)
             };
     blanding.use();
     blanding.setInt("texture1",0);
@@ -286,8 +285,8 @@ int main()
     Model tree(FileSystem::getPath("resources/objects/model.obj"));
     tree.SetShaderTextureNamePrefix("material.");
 
-    Model snowflake(FileSystem::getPath("resources/objects/gift_box_V3_L2.123cb5b4a10e-386f-4dcf-beb5-e678b747422e/11563_gift_box_V3.obj"));
-    snowflake.SetShaderTextureNamePrefix("material.");
+    Model gift(FileSystem::getPath("resources/objects/gift_box_V3_L2.123cb5b4a10e-386f-4dcf-beb5-e678b747422e/11563_gift_box_V3.obj"));
+    gift.SetShaderTextureNamePrefix("material.");
 
     Model santaClaus(FileSystem::getPath("resources/objects/Santa_Claus_v1_L2.123cb4fe07b2-55dd-461b-9f27-42ccf1b3f3f5/12165_Santa_Claus_v1_l2.obj"));
     santaClaus.SetShaderTextureNamePrefix("material.");
@@ -503,7 +502,7 @@ int main()
             if (dropGifts) {
                 for (unsigned int i = 0; i < p; i++) {
                     shaderGeometryPass.setMat4("model", modelMatrices[i]);
-                    snowflake.Draw(shaderGeometryPass);
+                    gift.Draw(shaderGeometryPass);
                 }
             }
             glBindFramebuffer(GL_FRAMEBUFFER, 0);
@@ -609,7 +608,7 @@ int main()
             if (dropGifts) {
                 for (unsigned int i = 0; i < p; i++) {
                     lightShader.setMat4("model", modelMatrices[i]);
-                    snowflake.Draw(lightShader);
+                    gift.Draw(lightShader);
                 }
             }
             // tree setup
@@ -683,7 +682,7 @@ int main()
 
             // render floor
             glBindVertexArray(floorVAO);
-            glEnable(GL_CULL_FACE);     // floor won't be visible if looked from bellow
+            glEnable(GL_CULL_FACE);
             glCullFace(GL_BACK);
             glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr);
             glDisable(GL_CULL_FACE);
@@ -691,10 +690,9 @@ int main()
 
             // skybox shader setup
             // -----------
-            glDepthFunc(
-                    GL_LEQUAL);  // change depth function so depth test passes when values are equal to depth buffer's content
+            glDepthFunc(GL_LEQUAL);  // change depth function so depth test passes when values are equal to depth buffer's content
             skyboxShader.use();
-            view = glm::mat4(glm::mat3(camera.GetViewMatrix())); // remove translation from the view matrix
+            view = glm::mat4(glm::mat3(camera.GetViewMatrix()));
             skyboxShader.setMat4("view", view);
             skyboxShader.setMat4("projection", projection);
 
@@ -704,7 +702,7 @@ int main()
             glBindTexture(GL_TEXTURE_CUBE_MAP, cubemapTexture);
             glDrawArrays(GL_TRIANGLES, 0, 36);
             glBindVertexArray(0);
-            glDepthFunc(GL_LESS); // set depth function back to default
+            glDepthFunc(GL_LESS);
 
             blanding.use();
             projection = glm::perspective(glm::radians(camera.Zoom), (float) SCR_WIDTH / (float) SCR_HEIGHT, 0.1f,
