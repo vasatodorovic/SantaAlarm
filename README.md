@@ -19,4 +19,6 @@ nadje na odredjenom rastojanju od jelke, gasi se kada se pritisne G
 `A grupa`: Skybox  
 `B grupa`: SSAO
 
+https://www.youtube.com/watch?v=dWLbu9epGR8  
+
 **Vasilije Todorovic 25/2019**
