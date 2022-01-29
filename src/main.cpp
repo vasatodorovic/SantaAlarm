@@ -226,57 +226,57 @@ int main()
     unsigned int floorSpecularMap = specularMap;
     vector<glm::vec3> snow
             {
-                    glm::vec3(-23.5f, 3.0f, -22.0f),//nazad
-                    glm::vec3( -15.5f, 3.0f, -22.0f),
-                    glm::vec3( -7.0f, 3.0f, -22.0f),
-                    glm::vec3(0.0f, 3.0f, -22.0f),
-                    glm::vec3 (7.0f, 3.0f, -22.0f),
-                    glm::vec3(-20.0f, 3.0f, -22.5f),
-                    glm::vec3( -12.5f, 3.0f, -22.5f),
-                    glm::vec3( -3.0f, 3.0f, -22.5f),
-                    glm::vec3(2.5f, 3.0f, -22.0f),
-                    glm::vec3 (15.5f, 3.0f, -22.0f),
-                    glm::vec3(-15.5f, 3.0f, 25.0f),//napred
-                    glm::vec3( -11.5f, 3.0f, 25.0f),
-                    glm::vec3( -6.0f, 3.0f, 25.0f),
-                    glm::vec3(1.0f, 3.0f, 25.0f),
-                    glm::vec3 (4.0f, 3.0f, 25.0f),
-                    glm::vec3(-14.5f, 3.0f, 25.5f),
-                    glm::vec3( -10.5f, 3.0f, 25.5f),
-                    glm::vec3( -6.5f, 3.0f, 25.5f),
-                    glm::vec3(-2.5f, 3.0f, 25.5f),
-                    glm::vec3 (1.5f, 3.0f, 25.5f),//levo
-                    glm::vec3(-22, 3.0f, -12.0f),
-                    glm::vec3( -22, 3.0f, -8.0f),
-                    glm::vec3( -22, 3.0f, -4.0f),
-                    glm::vec3(-22, 3.0f, -0.0f),
-                    glm::vec3 (-22, 3.0f, 4.0f),
-                    glm::vec3(-22.6, 3.0f, -12.5f),
-                    glm::vec3( -22.6, 3.0f, -8.5f),
-                    glm::vec3( -22.6, 3.0f, -4.5f),
-                    glm::vec3(-22.6, 3.0f, -0.5f),
-                    glm::vec3 (-22.6, 3.0f, 3.5f),
-                    glm::vec3(22, 3.0f, 12.0f),//desno
-                    glm::vec3( 22, 3.0f, 8.0f),
-                    glm::vec3( 22, 3.0f, 4.0f),
-                    glm::vec3(22, 3.0f, 0.0f),
-                    glm::vec3 (22, 3.0f, -4.0f),
-                    glm::vec3(22.6, 3.0f, 12.5f),
-                    glm::vec3( 22.6, 3.0f, 8.5f),
-                    glm::vec3( 22.6, 3.0f, 4.5f),
-                    glm::vec3(22.6, 3.0f, 0.5f),
-                    glm::vec3 (22.6, 3.0f, -3.5f)
+                    glm::vec3(-25.5f, 2.5f, -22.0f),//nazad
+                    glm::vec3( -15.5f, 2.5f, -22.0f),
+                    glm::vec3( -7.0f, 2.5f, -22.0f),
+                    glm::vec3(0.0f, 2.5f, -22.0f),
+                    glm::vec3 (7.0f, 2.5f, -22.0f),
+                    glm::vec3(-20.0f, 2.5f, -22.5f),
+                    glm::vec3( -12.5f, 2.5f, -22.5f),
+                    glm::vec3( -3.0f, 2.5f, -22.5f),
+                    glm::vec3(2.5f, 2.5f, -22.0f),
+                    glm::vec3 (15.5f, 2.5f, -22.0f),
+                    glm::vec3(-25.5f, 2.5f, 25.0f),//napred
+                    glm::vec3( -15.5f, 2.5f, 25.0f),
+                    glm::vec3( -7.0f, 2.5f, 25.0f),
+                    glm::vec3(0.0f, 2.5f, 25.0f),
+                    glm::vec3 (7.0f, 2.5f, 25.0f),
+                    glm::vec3(-20.0f, 2.5f, 25.5f),
+                    glm::vec3( -12.5f, 2.5f, 25.5f),
+                    glm::vec3( -3.0f, 2.5f, 25.5f),
+                    glm::vec3(2.5f, 2.5f, 25.5f),
+                    glm::vec3 (15.5f, 2.5f, 25.5f),
+                    glm::vec3(-25.3, 2.5f, -12.0f),//levo
+                    glm::vec3( -25.3, 2.5f, -4.0f),
+                    glm::vec3( -25.3, 2.5f, 4.0f),
+                    glm::vec3(-25.3, 2.5f, 12.0f),
+                    glm::vec3 (-25.3, 2.5f, 20.0f),
+                    glm::vec3(-25.3, 2.5f, -5.5f),
+                    glm::vec3( -25.3, 2.5f, 3.5f),
+                    glm::vec3( -25.3, 2.5f, 11.5f),
+                    glm::vec3(-25.3, 2.5f, 17.5f),
+                    glm::vec3 (-25.3, 2.5f, 25.5f),
+                    glm::vec3(25.3, 2.5f, -12.0f),//desno
+                    glm::vec3( 25.3, 2.5f, -4.0f),
+                    glm::vec3( 25.3, 2.5f, 4.0f),
+                    glm::vec3(25.3, 2.5f, 12.0f),
+                    glm::vec3 (25.3, 2.5f, 20.0f),
+                    glm::vec3(25.3, 2.5f, -5.5f),
+                    glm::vec3( 25.3, 2.5f, 3.5f),
+                    glm::vec3( 25.3, 2.5f, 11.5f),
+                    glm::vec3(25.3, 2.5f, 17.5f),
+                    glm::vec3 (25.3, 2.5f, 25.5f)
             };
     blanding.use();
     blanding.setInt("texture1",0);
 
     vector<std::string> skyboxSides = {
-        FileSystem::getPath("resources/textures/skybox/rainbow_rt.png"),
-        FileSystem::getPath("resources/textures/skybox/rainbow_lf.png"),
+        FileSystem::getPath("resources/textures/skybox/rainbow_ft.png"),
+        FileSystem::getPath("resources/textures/skybox/rainbow_bk.png"),
         FileSystem::getPath("resources/textures/skybox/rainbow_up.png"),
         FileSystem::getPath("resources/textures/skybox/rainbow_dn.png"),
-        FileSystem::getPath("resources/textures/skybox/rainbow_bk.png"),
-        FileSystem::getPath("resources/textures/skybox/rainbow_ft.png")
+        FileSystem::getPath("resources/textures/skybox/rainbow_rt.png"),
+        FileSystem::getPath("resources/textures/skybox/rainbow_lf.png")
     };
     unsigned int cubemapTexture = loadCubemap(skyboxSides);
     skyboxShader.use();
@@ -718,7 +718,7 @@ int main()
             for (unsigned int i = 0; i < snow.size(); i++) {
                 model = glm::mat4(1.0f);
                 model = glm::translate(model, snow[i]);
-                if (i > snow.size() / 2)
+                if (i >= snow.size() / 2)
                     model = glm::rotate(model, glm::radians(90.0f), glm::vec3(0, 1, 0));
                 model = glm::scale(model, glm::vec3(10.0f, 15.0f, 10.0f));
                 blanding.setMat4("model", model);
