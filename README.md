@@ -8,13 +8,13 @@ njihovog alarma i pokusace da je iskoristi.
 
 ### Kontrole  
 
-* Kretanje Deda Mraza : Strelice
-* Deda Mraz ostavlja poklone: G
-* SSAO : drzati X
-* Blinn on/off: B
+* Kretanje Deda Mraza : `Strelice` 
+* Deda Mraz ostavlja poklone: `G`
+* SSAO : drzati `X`
+* Blinn on/off: `B`
 
 "Alarm" je predstavljen uz pomoc spotlighta(treperi crveno) koji se ukljucuje kada se Deda Mraz 
 nadje na odredjenom rastojanju od jelke, gasi se kada se pritisne G
 
-A grupa:Skybox  
-B grupa: SSAO
+`A grupa`: Skybox  
+`B grupa`: SSAO
